@@ -25,6 +25,9 @@
 		9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336428A26295000A4196 /* SetUpProfileViewController.swift */; };
 		9744336728A264B5000A4196 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336628A264B5000A4196 /* PhotoView.swift */; };
 		9744336928A26FCC000A4196 /* SegmentedControll+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336828A26FCC000A4196 /* SegmentedControll+Extension.swift */; };
+		9744336B28A27B21000A4196 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336A28A27B21000A4196 /* ListViewController.swift */; };
+		9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336D28A27FB3000A4196 /* MainTabBarController.swift */; };
+		9744337028A28013000A4196 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336F28A28013000A4196 /* PeopleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		9744336428A26295000A4196 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileViewController.swift; sourceTree = "<group>"; };
 		9744336628A264B5000A4196 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		9744336828A26FCC000A4196 /* SegmentedControll+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControll+Extension.swift"; sourceTree = "<group>"; };
+		9744336A28A27B21000A4196 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9744336D28A27FB3000A4196 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9744336F28A28013000A4196 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +86,10 @@
 		9744333628A215FA000A4196 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				9744333B28A215FA000A4196 /* AuthViewController.swift */,
-				9744335D28A239D3000A4196 /* SignUpViewController.swift */,
-				9744336228A25AC6000A4196 /* LoginViewController.swift */,
-				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
+				9744336A28A27B21000A4196 /* ListViewController.swift */,
+				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
+				9744336F28A28013000A4196 /* PeopleViewController.swift */,
+				9744336C28A27F7E000A4196 /* SignIn&Auth */,
 				9744334D28A21F75000A4196 /* Core */,
 				9744334B28A21CD1000A4196 /* Resources */,
 				9744334C28A21D07000A4196 /* Application */,
@@ -141,6 +147,17 @@
 				9744335128A221DB000A4196 /* UIFont+Extension.swift */,
 			);
 			path = UIKitExtensions;
+			sourceTree = "<group>";
+		};
+		9744336C28A27F7E000A4196 /* SignIn&Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9744333B28A215FA000A4196 /* AuthViewController.swift */,
+				9744335D28A239D3000A4196 /* SignUpViewController.swift */,
+				9744336228A25AC6000A4196 /* LoginViewController.swift */,
+				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
+			);
+			path = "SignIn&Auth";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9744336B28A27B21000A4196 /* ListViewController.swift in Sources */,
 				9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */,
+				9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */,
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
+				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
 				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
 				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
 				9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */,
