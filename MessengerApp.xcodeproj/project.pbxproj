@@ -10,7 +10,6 @@
 		9744333828A215FA000A4196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333728A215FA000A4196 /* AppDelegate.swift */; };
 		9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333928A215FA000A4196 /* SceneDelegate.swift */; };
 		9744333C28A215FA000A4196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333B28A215FA000A4196 /* ViewController.swift */; };
-		9744333F28A215FA000A4196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9744333D28A215FA000A4196 /* Main.storyboard */; };
 		9744334128A215FB000A4196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9744334028A215FB000A4196 /* Assets.xcassets */; };
 		9744334428A215FB000A4196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9744334228A215FB000A4196 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		9744333728A215FA000A4196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9744333928A215FA000A4196 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9744333B28A215FA000A4196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9744333E28A215FA000A4196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9744334028A215FB000A4196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9744334328A215FB000A4196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9744334528A215FB000A4196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +57,6 @@
 				9744333728A215FA000A4196 /* AppDelegate.swift */,
 				9744333928A215FA000A4196 /* SceneDelegate.swift */,
 				9744333B28A215FA000A4196 /* ViewController.swift */,
-				9744333D28A215FA000A4196 /* Main.storyboard */,
 				9744334028A215FB000A4196 /* Assets.xcassets */,
 				9744334228A215FB000A4196 /* LaunchScreen.storyboard */,
 				9744334528A215FB000A4196 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				9744334428A215FB000A4196 /* LaunchScreen.storyboard in Resources */,
 				9744334128A215FB000A4196 /* Assets.xcassets in Resources */,
-				9744333F28A215FA000A4196 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9744333D28A215FA000A4196 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9744333E28A215FA000A4196 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9744334228A215FB000A4196 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +282,9 @@
 				INFOPLIST_FILE = MessengerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,7 +294,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +310,9 @@
 				INFOPLIST_FILE = MessengerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +322,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
