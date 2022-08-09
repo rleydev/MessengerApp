@@ -27,14 +27,16 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUpUI()
-        // Do any additional setup after loading the view.
     }
     
     private func setUpUI() {
         view.addSubview(logoImageView)
         setUpConstraints()
     }
-    
+
+}
+
+extension AuthViewController {
     private func setUpConstraints() {
         
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,7 +59,6 @@ class AuthViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
-
 }
 
 import SwiftUI
