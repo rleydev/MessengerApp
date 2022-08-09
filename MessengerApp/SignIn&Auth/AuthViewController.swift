@@ -21,7 +21,7 @@ class AuthViewController: UIViewController {
     
     private let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadowed: true)
     
-    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
+    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "chat-box"), contentMode: .scaleAspectFit)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +52,10 @@ extension AuthViewController {
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 130),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 160),
+            stackView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 100),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
