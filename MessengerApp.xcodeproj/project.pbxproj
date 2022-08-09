@@ -21,6 +21,7 @@
 		9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335B28A234EF000A4196 /* StackView+extension.swift */; };
 		9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335D28A239D3000A4196 /* SignUpViewController.swift */; };
 		9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336028A23D49000A4196 /* OneLineTextField.swift */; };
+		9744336328A25AC6000A4196 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336228A25AC6000A4196 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9744335B28A234EF000A4196 /* StackView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView+extension.swift"; sourceTree = "<group>"; };
 		9744335D28A239D3000A4196 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9744336028A23D49000A4196 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		9744336228A25AC6000A4196 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				9744333B28A215FA000A4196 /* AuthViewController.swift */,
 				9744335D28A239D3000A4196 /* SignUpViewController.swift */,
+				9744336228A25AC6000A4196 /* LoginViewController.swift */,
 				9744334D28A21F75000A4196 /* Core */,
 				9744334B28A21CD1000A4196 /* Resources */,
 				9744334C28A21D07000A4196 /* Application */,
@@ -212,6 +215,7 @@
 				9744335628A2268A000A4196 /* UILabel+Extension.swift in Sources */,
 				9744335428A223BB000A4196 /* UIColor+Extension.swift in Sources */,
 				9744335228A221DB000A4196 /* UIFont+Extension.swift in Sources */,
+				9744336328A25AC6000A4196 /* LoginViewController.swift in Sources */,
 				9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

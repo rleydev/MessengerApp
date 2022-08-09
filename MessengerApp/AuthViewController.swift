@@ -9,19 +9,19 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    let googleLabel = UILabel(text: "Get started with")
+    private let googleLabel = UILabel(text: "Get started with")
     
-    let emailLabel = UILabel(text: "Or sign up with")
+    private let emailLabel = UILabel(text: "Or sign up with")
     
-    let alreadyOnboardedLabel = UILabel(text: "Already onboared")
+    private let alreadyOnboardedLabel = UILabel(text: "Already onboared")
     
-    let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .buttonDark())
+    private let emailButton = UIButton(title: "Email", titleColor: .white, backgroundColor: .buttonDark())
     
-    let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadowed: true)
+    private let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadowed: true)
     
-    let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadowed: true)
+    private let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadowed: true)
     
-    let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
+    private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "Logo"), contentMode: .scaleAspectFit)
     
     override func viewDidLoad() {
         super.viewDidLoad()
