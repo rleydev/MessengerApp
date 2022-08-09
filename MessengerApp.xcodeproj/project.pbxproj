@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		9744333828A215FA000A4196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333728A215FA000A4196 /* AppDelegate.swift */; };
 		9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333928A215FA000A4196 /* SceneDelegate.swift */; };
-		9744333C28A215FA000A4196 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333B28A215FA000A4196 /* ViewController.swift */; };
+		9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333B28A215FA000A4196 /* AuthViewController.swift */; };
 		9744334128A215FB000A4196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9744334028A215FB000A4196 /* Assets.xcassets */; };
 		9744334428A215FB000A4196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9744334228A215FB000A4196 /* LaunchScreen.storyboard */; };
+		9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744334F28A21F9A000A4196 /* UIButton+Extension.swift */; };
+		9744335228A221DB000A4196 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335128A221DB000A4196 /* UIFont+Extension.swift */; };
+		9744335428A223BB000A4196 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335328A223BB000A4196 /* UIColor+Extension.swift */; };
+		9744335628A2268A000A4196 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335528A2268A000A4196 /* UILabel+Extension.swift */; };
+		9744335828A22774000A4196 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335728A22774000A4196 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9744333428A215FA000A4196 /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9744333728A215FA000A4196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9744333928A215FA000A4196 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9744333B28A215FA000A4196 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9744333B28A215FA000A4196 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		9744334028A215FB000A4196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9744334328A215FB000A4196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9744334528A215FB000A4196 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9744334F28A21F9A000A4196 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		9744335128A221DB000A4196 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		9744335328A223BB000A4196 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9744335528A2268A000A4196 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		9744335728A22774000A4196 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +64,8 @@
 		9744333628A215FA000A4196 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				9744333B28A215FA000A4196 /* ViewController.swift */,
+				9744334D28A21F75000A4196 /* Core */,
+				9744333B28A215FA000A4196 /* AuthViewController.swift */,
 				9744334B28A21CD1000A4196 /* Resources */,
 				9744334C28A21D07000A4196 /* Application */,
 			);
@@ -78,6 +89,26 @@
 				9744334528A215FB000A4196 /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		9744334D28A21F75000A4196 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9744334E28A21F7B000A4196 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		9744334E28A21F7B000A4196 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9744334F28A21F9A000A4196 /* UIButton+Extension.swift */,
+				9744335128A221DB000A4196 /* UIFont+Extension.swift */,
+				9744335328A223BB000A4196 /* UIColor+Extension.swift */,
+				9744335528A2268A000A4196 /* UILabel+Extension.swift */,
+				9744335728A22774000A4196 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9744333C28A215FA000A4196 /* ViewController.swift in Sources */,
+				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
+				9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */,
+				9744335828A22774000A4196 /* UIImageView+Extension.swift in Sources */,
 				9744333828A215FA000A4196 /* AppDelegate.swift in Sources */,
+				9744335628A2268A000A4196 /* UILabel+Extension.swift in Sources */,
+				9744335428A223BB000A4196 /* UIColor+Extension.swift in Sources */,
+				9744335228A221DB000A4196 /* UIFont+Extension.swift in Sources */,
 				9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
