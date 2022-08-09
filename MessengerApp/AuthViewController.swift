@@ -30,6 +30,7 @@ class AuthViewController: UIViewController {
     }
     
     private func setUpUI() {
+        googleButton.customizeGoogleButton()
         view.addSubview(logoImageView)
         setUpConstraints()
     }

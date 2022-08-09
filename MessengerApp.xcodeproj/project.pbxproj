@@ -22,6 +22,8 @@
 		9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744335D28A239D3000A4196 /* SignUpViewController.swift */; };
 		9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336028A23D49000A4196 /* OneLineTextField.swift */; };
 		9744336328A25AC6000A4196 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336228A25AC6000A4196 /* LoginViewController.swift */; };
+		9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336428A26295000A4196 /* SetUpProfileViewController.swift */; };
+		9744336728A264B5000A4196 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336628A264B5000A4196 /* PhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		9744335D28A239D3000A4196 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9744336028A23D49000A4196 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		9744336228A25AC6000A4196 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9744336428A26295000A4196 /* SetUpProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpProfileViewController.swift; sourceTree = "<group>"; };
+		9744336628A264B5000A4196 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				9744333B28A215FA000A4196 /* AuthViewController.swift */,
 				9744335D28A239D3000A4196 /* SignUpViewController.swift */,
 				9744336228A25AC6000A4196 /* LoginViewController.swift */,
+				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
 				9744334D28A21F75000A4196 /* Core */,
 				9744334B28A21CD1000A4196 /* Resources */,
 				9744334C28A21D07000A4196 /* Application */,
@@ -114,6 +119,7 @@
 		9744334E28A21F7B000A4196 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9744336628A264B5000A4196 /* PhotoView.swift */,
 				9744335928A22F1D000A4196 /* ButtonFormView.swift */,
 				9744336028A23D49000A4196 /* OneLineTextField.swift */,
 				9744335F28A23D21000A4196 /* UIKitExtensions */,
@@ -206,6 +212,8 @@
 			files = (
 				9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */,
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
+				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
+				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
 				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
 				9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */,
 				9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */,
