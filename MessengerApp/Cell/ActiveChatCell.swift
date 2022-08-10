@@ -18,7 +18,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     let friendImageView = UIImageView()
     let friendName = UILabel(text: "User Name", font: .laoSangnamMN20())
     let lastMessage = UILabel(text: "whatsup?", font: .laoSangnamMN18())
-    let gradientView = UIView()
+    let gradientView = GradientView(from: .topTrailing, to: .bottomLeading, startColor: #colorLiteral(red: 0.7882352941, green: 0.631372549, blue: 0.9411764706, alpha: 1), endColor: #colorLiteral(red: 0.4784313725, green: 0.6980392157, blue: 0.9215686275, alpha: 1))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,11 +50,8 @@ extension ActiveChatCell {
         friendName.translatesAutoresizingMaskIntoConstraints = false
         lastMessage.translatesAutoresizingMaskIntoConstraints = false
         
-        friendImageView.backgroundColor = .gray
-        gradientView.backgroundColor = .blue
-        
-        addSubview(friendImageView)
         addSubview(gradientView)
+        addSubview(friendImageView)
         addSubview(friendName)
         addSubview(lastMessage)
         
@@ -67,7 +64,7 @@ extension ActiveChatCell {
             gradientView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             gradientView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             gradientView.heightAnchor.constraint(equalToConstant: 78),
-            gradientView.widthAnchor.constraint(equalToConstant: 8),
+            gradientView.widthAnchor.constraint(equalToConstant: 10),
             
             friendName.topAnchor.constraint(equalTo: self.topAnchor, constant: 12),
             friendName.leadingAnchor.constraint(equalTo: friendImageView.trailingAnchor, constant: 16),
@@ -78,7 +75,6 @@ extension ActiveChatCell {
             lastMessage.trailingAnchor.constraint(equalTo: gradientView.leadingAnchor, constant: 16)
         ])
     }
-    
 }
 
 import SwiftUI

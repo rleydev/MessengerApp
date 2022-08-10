@@ -32,6 +32,7 @@
 		97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */; };
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
 		97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */; };
+		97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF828A3A1D100F66238 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
+		97CA8BF828A3A1D100F66238 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		9744334E28A21F7B000A4196 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				97CA8BF828A3A1D100F66238 /* GradientView.swift */,
 				9744336628A264B5000A4196 /* PhotoView.swift */,
 				9744335928A22F1D000A4196 /* ButtonFormView.swift */,
 				9744336028A23D49000A4196 /* OneLineTextField.swift */,
@@ -254,6 +257,7 @@
 			files = (
 				9744336B28A27B21000A4196 /* ListViewController.swift in Sources */,
 				9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */,
+				97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */,
 				9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */,
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
 				97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */,
