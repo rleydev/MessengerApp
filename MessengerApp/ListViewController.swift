@@ -13,14 +13,26 @@ class ListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
+
         setUpCollectionView()
+        setUpSearchBar()
+    }
+    
+    private func setUpSearchBar() {
+        navigationController?.navigationBar.barTintColor = .mainWhite()
+        navigationController?.navigationBar.shadowImage = UIImage()
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
     }
 
     private func setUpCollectionView() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .mainWhite()
 
         view.addSubview(collectionView)
 
@@ -46,6 +58,12 @@ extension ListViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
 }
 
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+    }
+}
+
 import SwiftUI
 
 struct ListViewControllerProvider: PreviewProvider {
@@ -56,7 +74,7 @@ struct ListViewControllerProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let viewController = ListViewController()
+        let viewController = MainTabBarController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController

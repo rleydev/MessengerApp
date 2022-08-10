@@ -86,8 +86,8 @@
 		9744333628A215FA000A4196 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
+				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336C28A27F7E000A4196 /* SignIn&Auth */,
 				9744334D28A21F75000A4196 /* Core */,
