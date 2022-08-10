@@ -113,7 +113,7 @@ class ListViewController: UIViewController {
 
 // MARK: - UISearchBarDelegate
 extension ListViewController: UISearchBarDelegate {
-    private func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
     }
 }
