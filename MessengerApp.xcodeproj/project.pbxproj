@@ -29,6 +29,9 @@
 		9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336D28A27FB3000A4196 /* MainTabBarController.swift */; };
 		9744337028A28013000A4196 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744336F28A28013000A4196 /* PeopleViewController.swift */; };
 		9765529428A3AB460025D80A /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765529328A3AB460025D80A /* SectionHeader.swift */; };
+		9765529728A3B0F20025D80A /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 9765529628A3B0F20025D80A /* users.json */; };
+		9765529A28A3B19F0025D80A /* MUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765529928A3B19F0025D80A /* MUser.swift */; };
+		9765529C28A3B1A50025D80A /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9765529B28A3B1A50025D80A /* MChat.swift */; };
 		97CA64A628A375EC00C51FA7 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64A528A375EC00C51FA7 /* waitingChats.json */; };
 		97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */; };
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
@@ -63,6 +66,9 @@
 		9744336D28A27FB3000A4196 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9744336F28A28013000A4196 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		9765529328A3AB460025D80A /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		9765529628A3B0F20025D80A /* users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		9765529928A3B19F0025D80A /* MUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MUser.swift; sourceTree = "<group>"; };
+		9765529B28A3B1A50025D80A /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 		97CA64A528A375EC00C51FA7 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -102,10 +108,12 @@
 		9744333628A215FA000A4196 /* MessengerApp */ = {
 			isa = PBXGroup;
 			children = (
-				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
-				9744336A28A27B21000A4196 /* ListViewController.swift */,
-				9765529328A3AB460025D80A /* SectionHeader.swift */,
-				9744336F28A28013000A4196 /* PeopleViewController.swift */,
+				9765529628A3B0F20025D80A /* users.json */,
+				97CA64A528A375EC00C51FA7 /* waitingChats.json */,
+				97CA64AB28A3773000C51FA7 /* activeChats.json */,
+				9765529D28A3B1A90025D80A /* Models */,
+				9765529828A3B1070025D80A /* Views */,
+				9765529528A3B0B10025D80A /* SectionHeader */,
 				97CA8BF528A37DBF00F66238 /* Cell */,
 				9744336C28A27F7E000A4196 /* SignIn&Auth */,
 				9744334D28A21F75000A4196 /* Core */,
@@ -166,8 +174,6 @@
 				9744335528A2268A000A4196 /* UILabel+Extension.swift */,
 				9744335728A22774000A4196 /* UIImageView+Extension.swift */,
 				9744335128A221DB000A4196 /* UIFont+Extension.swift */,
-				97CA64AB28A3773000C51FA7 /* activeChats.json */,
-				97CA64A528A375EC00C51FA7 /* waitingChats.json */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -181,6 +187,33 @@
 				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
 			);
 			path = "SignIn&Auth";
+			sourceTree = "<group>";
+		};
+		9765529528A3B0B10025D80A /* SectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9765529328A3AB460025D80A /* SectionHeader.swift */,
+			);
+			path = SectionHeader;
+			sourceTree = "<group>";
+		};
+		9765529828A3B1070025D80A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9744336A28A27B21000A4196 /* ListViewController.swift */,
+				9744336F28A28013000A4196 /* PeopleViewController.swift */,
+				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9765529D28A3B1A90025D80A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9765529928A3B19F0025D80A /* MUser.swift */,
+				9765529B28A3B1A50025D80A /* MChat.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		97CA8BF528A37DBF00F66238 /* Cell */ = {
@@ -258,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9765529728A3B0F20025D80A /* users.json in Resources */,
 				97CA64A628A375EC00C51FA7 /* waitingChats.json in Resources */,
 				9744334428A215FB000A4196 /* LaunchScreen.storyboard in Resources */,
 				9744334128A215FB000A4196 /* Assets.xcassets in Resources */,
@@ -272,12 +306,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9765529C28A3B1A50025D80A /* MChat.swift in Sources */,
 				9744336B28A27B21000A4196 /* ListViewController.swift in Sources */,
 				9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */,
 				9765529428A3AB460025D80A /* SectionHeader.swift in Sources */,
 				97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */,
 				9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */,
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
+				9765529A28A3B19F0025D80A /* MUser.swift in Sources */,
 				97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
