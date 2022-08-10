@@ -31,6 +31,7 @@
 		97CA64A628A375EC00C51FA7 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64A528A375EC00C51FA7 /* waitingChats.json */; };
 		97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */; };
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
+		97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		97CA64A528A375EC00C51FA7 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
+		97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
 				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
+				97CA8BF528A37DBF00F66238 /* Cell */,
 				9744336C28A27F7E000A4196 /* SignIn&Auth */,
 				9744334D28A21F75000A4196 /* Core */,
 				9744334B28A21CD1000A4196 /* Resources */,
@@ -167,6 +170,14 @@
 				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
 			);
 			path = "SignIn&Auth";
+			sourceTree = "<group>";
+		};
+		97CA8BF528A37DBF00F66238 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				9744336128A23D49000A4196 /* OneLineTextField.swift in Sources */,
 				9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */,
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
+				97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
 				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
