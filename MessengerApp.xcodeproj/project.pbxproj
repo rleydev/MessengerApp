@@ -33,6 +33,8 @@
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
 		97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */; };
 		97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF828A3A1D100F66238 /* GradientView.swift */; };
+		97CA8BFB28A3A67F00F66238 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */; };
+		97CA8BFD28A3A7A500F66238 /* SelfConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
 		97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveChatCell.swift; sourceTree = "<group>"; };
 		97CA8BF828A3A1D100F66238 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
+		97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigurationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		9744334D28A21F75000A4196 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				97CA8BFE28A3A7BB00F66238 /* Protocols */,
 				9744334E28A21F7B000A4196 /* Extensions */,
 			);
 			path = Core;
@@ -179,8 +184,17 @@
 			isa = PBXGroup;
 			children = (
 				97CA8BF628A37DD200F66238 /* ActiveChatCell.swift */,
+				97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		97CA8BFE28A3A7BB00F66238 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +284,8 @@
 				9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */,
 				9744336928A26FCC000A4196 /* SegmentedControll+Extension.swift in Sources */,
 				9744335828A22774000A4196 /* UIImageView+Extension.swift in Sources */,
+				97CA8BFB28A3A67F00F66238 /* WaitingChatCell.swift in Sources */,
+				97CA8BFD28A3A7A500F66238 /* SelfConfigurationCell.swift in Sources */,
 				9744335A28A22F1D000A4196 /* ButtonFormView.swift in Sources */,
 				9744333828A215FA000A4196 /* AppDelegate.swift in Sources */,
 				9744335628A2268A000A4196 /* UILabel+Extension.swift in Sources */,
