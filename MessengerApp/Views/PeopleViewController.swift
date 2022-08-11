@@ -163,7 +163,7 @@ struct PeopleViewControllerProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let viewController = MainTabBarController()
+        private let viewController = MainTabBarController()
         
         func makeUIViewController(context: Context) -> some UIViewController {
             return viewController

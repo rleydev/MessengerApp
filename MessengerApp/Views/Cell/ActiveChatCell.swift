@@ -81,7 +81,7 @@ struct ActiveChatProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let tabBarVC = MainTabBarController()
+        private let tabBarVC = MainTabBarController()
         
         func makeUIViewController(context: UIViewControllerRepresentableContext<ActiveChatProvider.ContainerView>) -> MainTabBarController {
             return tabBarVC

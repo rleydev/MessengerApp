@@ -55,7 +55,7 @@ struct WaitingChatProvider: PreviewProvider {
     
     struct ContainerView: UIViewControllerRepresentable {
         
-        let tabBarVC = MainTabBarController()
+        private let tabBarVC = MainTabBarController()
         
         func makeUIViewController(context: UIViewControllerRepresentableContext<WaitingChatProvider.ContainerView>) -> MainTabBarController {
             return tabBarVC

@@ -41,6 +41,7 @@
 		97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BF828A3A1D100F66238 /* GradientView.swift */; };
 		97CA8BFB28A3A67F00F66238 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */; };
 		97CA8BFD28A3A7A500F66238 /* SelfConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */; };
+		97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF314E28A4B17300D23BBB /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		97CA8BF828A3A1D100F66238 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigurationCell.swift; sourceTree = "<group>"; };
+		97EF314E28A4B17300D23BBB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
+				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
 				9765529528A3B0B10025D80A /* SectionHeader */,
 			);
 			path = Views;
@@ -324,6 +327,7 @@
 				97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
+				97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */,
 				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
 				97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */,
 				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
