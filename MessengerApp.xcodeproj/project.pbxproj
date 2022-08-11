@@ -44,6 +44,7 @@
 		97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF314E28A4B17300D23BBB /* ProfileViewController.swift */; };
 		97EF315128A4B6FA00D23BBB /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */; };
 		97EF315328A4BB3900D23BBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315228A4BB3900D23BBB /* UIView+Extension.swift */; };
+		97EF315528A4C03E00D23BBB /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		97EF314E28A4B17300D23BBB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		97EF315228A4BB3900D23BBB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
 				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
+				97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */,
 				97CA8BF528A37DBF00F66238 /* Cell */,
 				9765529528A3B0B10025D80A /* SectionHeader */,
 			);
@@ -336,6 +339,7 @@
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
 				97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */,
 				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
+				97EF315528A4C03E00D23BBB /* ChatRequestViewController.swift in Sources */,
 				97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */,
 				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
 				9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */,
