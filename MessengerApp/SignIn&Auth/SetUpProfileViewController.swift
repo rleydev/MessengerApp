@@ -21,7 +21,7 @@ class SetUpProfileViewController: UIViewController {
     
     private let sexSegmentedControll = UISegmentedControl(first: "Male", second: "Female")
     
-    private let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .buttonDark(), corenerRadius: 10)
+    private let goToChatsButton = UIButton(title: "Go to chats!", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 10)
     
     override func viewDidLoad() {
         

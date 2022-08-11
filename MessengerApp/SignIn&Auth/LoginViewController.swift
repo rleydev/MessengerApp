@@ -42,6 +42,21 @@ class LoginViewController: UIViewController {
         view.backgroundColor = .white
         googleButton.customizeGoogleButton()
         setUpConstraints()
+        
+        loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func loginButtonButtonTapped() {
+        print(#function)
+        AuthService.shared.login(email: emailTextField.text!, password: passwordTextField.text!) { (result) in
+            switch result {
+            case .success(let user):
+                self.showAlert(with: "Success", and: "You are in your account")
+                print(user.email)
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -116,4 +131,14 @@ struct LoginViewControllerProvider: PreviewProvider {
         }
     }
 }
+
+extension LoginViewController {
+    func showAlert(with title: String, and message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+}
+
 

@@ -9,6 +9,9 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
+    private let signUpVC = SignUpViewController()
+    private let loginVC = LoginViewController()
+    
     private let googleLabel = UILabel(text: "Get started with")
     
     private let emailLabel = UILabel(text: "Or sign up with")
@@ -27,6 +30,20 @@ class AuthViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUpUI()
+        
+        emailButton.addTarget(self, action: #selector(emailButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func emailButtonTapped() {
+        print(#function)
+        
+        present(signUpVC, animated: true, completion: nil)
+    }
+    
+    @objc private func loginButtonTapped() {
+        print(#function)
+        present(loginVC, animated: true, completion: nil)
     }
     
     private func setUpUI() {
