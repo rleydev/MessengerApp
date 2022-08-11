@@ -9,26 +9,28 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
+    private let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
     
-    let emailLabel = UILabel(text: "Email")
-    let passwordLabel = UILabel(text: "Password")
-    let confirmPasswodLabel = UILabel(text: "Confirm password")
-    let alreadyOnboardLabel = UILabel(text: "Already onboard?")
+    private let emailLabel = UILabel(text: "Email")
+    private let passwordLabel = UILabel(text: "Password")
+    private let confirmPasswodLabel = UILabel(text: "Confirm password")
+    private let alreadyOnboardLabel = UILabel(text: "Already onboard?")
     
-    let emailTextField = OneLineTextField(font: .avenir20())
-    let passwordTextField = OneLineTextField(font: .avenir20())
-    let confirmPasswordTextField = OneLineTextField(font: .avenir20())
+    private let emailTextField = OneLineTextField(font: .avenir20())
+    private let passwordTextField = OneLineTextField(font: .avenir20())
+    private let confirmPasswordTextField = OneLineTextField(font: .avenir20())
     
-    let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 15)
+    private let signUpButton = UIButton(title: "Sign Up", titleColor: .white, backgroundColor: .buttonDark(), cornerRadius: 15)
     
-    let loginButton: UIButton = {
+    private let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.buttonRed(), for: .normal)
         button.titleLabel?.font = .avenir20()
         return button
     }()
+    
+    weak var delegate: AuthNavigationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,7 @@ class SignUpViewController: UIViewController {
         setupConstraints()
         
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
     }
     
     @objc private func signUpButtonTapped() {
@@ -44,11 +47,18 @@ class SignUpViewController: UIViewController {
             
             switch result {
             case .success(let user):
-                self.showAlert(with: "Success", and: "You are signed")
-                print(user.email)
+                self.showAlert(with: "Success", and: "You are signed in") {
+                    self.present(SetUpProfileViewController(), animated: true, completion: nil)
+                }
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
+        }
+    }
+    
+    @objc private func loginButtinTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toLogVC()
         }
     }
 
@@ -131,10 +141,12 @@ struct SignUpViewControllerProvider: PreviewProvider {
 }
                           
                           
-extension SignUpViewController {
-    func showAlert(with title: String, and message: String) {
+extension UIViewController {
+    func showAlert(with title: String, and message: String, completion: @escaping () -> Void = { }) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
+        let ok = UIAlertAction(title: "Ok", style: .default) { _ in
+            completion()
+        }
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }

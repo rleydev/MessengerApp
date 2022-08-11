@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol AuthNavigationDelegate: AnyObject {
+    func toLogVC()
+    func toSignUpVC()
+}
+
 class LoginViewController: UIViewController {
     
     private let welcomeLabel = UILabel(text: "Welcome Back!", font: .avenir26())
@@ -37,6 +42,8 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -44,6 +51,7 @@ class LoginViewController: UIViewController {
         setUpConstraints()
         
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonButtonTapped() {
@@ -52,10 +60,16 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let user):
                 self.showAlert(with: "Success", and: "You are in your account")
-                print(user.email)
+                
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
             }
+        }
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
         }
     }
 }
@@ -129,15 +143,6 @@ struct LoginViewControllerProvider: PreviewProvider {
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             
         }
-    }
-}
-
-extension LoginViewController {
-    func showAlert(with title: String, and message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "ok", style: .default, handler: nil)
-        alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
     }
 }
 
