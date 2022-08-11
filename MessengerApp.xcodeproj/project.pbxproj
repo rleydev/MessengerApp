@@ -42,6 +42,8 @@
 		97CA8BFB28A3A67F00F66238 /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */; };
 		97CA8BFD28A3A7A500F66238 /* SelfConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */; };
 		97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF314E28A4B17300D23BBB /* ProfileViewController.swift */; };
+		97EF315128A4B6FA00D23BBB /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */; };
+		97EF315328A4BB3900D23BBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315228A4BB3900D23BBB /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +84,8 @@
 		97CA8BFA28A3A67F00F66238 /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfigurationCell.swift; sourceTree = "<group>"; };
 		97EF314E28A4B17300D23BBB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
+		97EF315228A4BB3900D23BBB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				97CA8BF828A3A1D100F66238 /* GradientView.swift */,
+				97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */,
 				9744336628A264B5000A4196 /* PhotoView.swift */,
 				9744335928A22F1D000A4196 /* ButtonFormView.swift */,
 				9744336028A23D49000A4196 /* OneLineTextField.swift */,
@@ -179,6 +184,7 @@
 				9744335728A22774000A4196 /* UIImageView+Extension.swift */,
 				9744335128A221DB000A4196 /* UIFont+Extension.swift */,
 				976552A028A3CC0C0025D80A /* UIViewController+Extension.swift */,
+				97EF315228A4BB3900D23BBB /* UIView+Extension.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -205,11 +211,11 @@
 		9765529828A3B1070025D80A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				97CA8BF528A37DBF00F66238 /* Cell */,
 				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
 				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
+				97CA8BF528A37DBF00F66238 /* Cell */,
 				9765529528A3B0B10025D80A /* SectionHeader */,
 			);
 			path = Views;
@@ -325,6 +331,7 @@
 				9744335E28A239D3000A4196 /* SignUpViewController.swift in Sources */,
 				9765529A28A3B19F0025D80A /* MUser.swift in Sources */,
 				97CA8BF728A37DD200F66238 /* ActiveChatCell.swift in Sources */,
+				97EF315128A4B6FA00D23BBB /* InsertableTextField.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
 				97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */,
@@ -332,6 +339,7 @@
 				97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */,
 				9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */,
 				9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */,
+				97EF315328A4BB3900D23BBB /* UIView+Extension.swift in Sources */,
 				9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */,
 				9744336928A26FCC000A4196 /* SegmentedControll+Extension.swift in Sources */,
 				9744335828A22774000A4196 /* UIImageView+Extension.swift in Sources */,

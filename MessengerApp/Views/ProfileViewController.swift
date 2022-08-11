@@ -12,8 +12,8 @@ class ProfileViewController: UIViewController {
     private let containerView = UIView()
     private let imageView = UIImageView(image: #imageLiteral(resourceName: "human2"), contentMode: .scaleAspectFill)
     private let nameLabel = UILabel(text: "Name Surname", font: .systemFont(ofSize: 20, weight: .light))
-    private let aboutMeLabel = UILabel(text: "Some information", font: .systemFont(ofSize: 16, weight: .light))
-    private let myTextField = UITextField()
+    private let aboutMeLabel = UILabel(text: "Some Information", font: .systemFont(ofSize: 16, weight: .light))
+    private let myTextField = InsertableTextField()
     
     
     override func viewDidLoad() {
@@ -34,7 +34,14 @@ class ProfileViewController: UIViewController {
         aboutMeLabel.numberOfLines = 0
         
         myTextField.translatesAutoresizingMaskIntoConstraints = false
-        myTextField.borderStyle = .roundedRect
+        
+        if let button = myTextField.rightView as? UIButton {
+            button.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
+        }
+    }
+    
+    @objc private func sendMessage() {
+        print(#function)
     }
     
 }
