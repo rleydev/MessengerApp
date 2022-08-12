@@ -44,11 +44,12 @@ class SetUpProfileViewController: UIViewController {
     }
     
     @objc private func goToChatsButtonTapped() {
-        FirestoreService.shared.saveProfileWith(id: currentUser.uid, email: currentUser.email!, username: fullNameTextField.text, avatarImageString: nil, decription: aboutMeTextField.text, sex: sexSegmentedControll.titleForSegment(at: sexSegmentedControll.selectedSegmentIndex)) { (result) in
-            
+        FirestoreService.shared.saveProfileWith(id: currentUser.uid, email: currentUser.email!, username: fullNameTextField.text, avatarImageString: nil, description: aboutMeTextField.text, sex: sexSegmentedControll.titleForSegment(at: sexSegmentedControll.selectedSegmentIndex)) { (result) in
             switch result {
-            case .success(_):
-                self.showAlert(with: "Success!", and: "Have a nice chat")
+            case .success(let muser):
+                self.showAlert(with: "Success!", and: "Have a nice chat") {
+                    self.present(MainTabBarController(), animated: true, completion: nil)
+                }
             case .failure(_):
                 self.showAlert(with: "Error!", and: "")
             }

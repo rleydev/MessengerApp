@@ -126,6 +126,7 @@
 				9717144428A523A300529FE9 /* FirestoreService.swift */,
 			);
 			name = Services;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		9717143F28A5072A00529FE9 /* Helpers */ = {
@@ -160,11 +161,8 @@
 				9765529628A3B0F20025D80A /* users.json */,
 				97CA64AB28A3773000C51FA7 /* activeChats.json */,
 				97CA64A528A375EC00C51FA7 /* waitingChats.json */,
-				9717143F28A5072A00529FE9 /* Helpers */,
-				9717143728A4E31300529FE9 /* Services */,
 				9765529D28A3B1A90025D80A /* Models */,
-				9765529828A3B1070025D80A /* Views */,
-				9744336C28A27F7E000A4196 /* SignIn&Auth */,
+				9765529828A3B1070025D80A /* ViewControllers */,
 				9744334D28A21F75000A4196 /* Core */,
 				9744334B28A21CD1000A4196 /* Resources */,
 				9744334C28A21D07000A4196 /* Application */,
@@ -195,6 +193,8 @@
 		9744334D28A21F75000A4196 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9717143F28A5072A00529FE9 /* Helpers */,
+				9717143728A4E31300529FE9 /* Services */,
 				97CA8BFE28A3A7BB00F66238 /* Protocols */,
 				9744334E28A21F7B000A4196 /* Extensions */,
 			);
@@ -231,7 +231,7 @@
 			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
-		9744336C28A27F7E000A4196 /* SignIn&Auth */ = {
+		9744336C28A27F7E000A4196 /* SignIn&AuthViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				9744333B28A215FA000A4196 /* AuthViewController.swift */,
@@ -239,7 +239,7 @@
 				9744336228A25AC6000A4196 /* LoginViewController.swift */,
 				9744336428A26295000A4196 /* SetUpProfileViewController.swift */,
 			);
-			path = "SignIn&Auth";
+			path = "SignIn&AuthViewControllers";
 			sourceTree = "<group>";
 		};
 		9765529528A3B0B10025D80A /* SectionHeader */ = {
@@ -250,9 +250,10 @@
 			path = SectionHeader;
 			sourceTree = "<group>";
 		};
-		9765529828A3B1070025D80A /* Views */ = {
+		9765529828A3B1070025D80A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9744336C28A27F7E000A4196 /* SignIn&AuthViewControllers */,
 				9744336A28A27B21000A4196 /* ListViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
@@ -261,7 +262,7 @@
 				97CA8BF528A37DBF00F66238 /* Cell */,
 				9765529528A3B0B10025D80A /* SectionHeader */,
 			);
-			path = Views;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9765529D28A3B1A90025D80A /* Models */ = {
