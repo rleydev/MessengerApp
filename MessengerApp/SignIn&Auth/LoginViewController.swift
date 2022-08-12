@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol AuthNavigationDelegate: AnyObject {
-    func toLogVC()
-    func toSignUpVC()
-}
-
 class LoginViewController: UIViewController {
     
     private let welcomeLabel = UILabel(text: "Welcome Back!", font: .avenir26())
@@ -57,6 +52,7 @@ class LoginViewController: UIViewController {
     @objc private func loginButtonButtonTapped() {
         print(#function)
         AuthService.shared.login(email: emailTextField.text!, password: passwordTextField.text!) { (result) in
+            
             switch result {
             case .success(let user):
                 self.showAlert(with: "Success", and: "You are in your account")
