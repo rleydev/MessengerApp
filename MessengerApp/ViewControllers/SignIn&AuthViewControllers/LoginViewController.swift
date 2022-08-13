@@ -11,17 +11,13 @@ class LoginViewController: UIViewController {
     
     private let welcomeLabel = UILabel(text: "Welcome Back!", font: .avenir26())
     
-    private let loginWithLabel = UILabel(text: "Login with")
-    
-    private let orLabel = UILabel(text: "or")
+    private let loginWithLabel = UILabel(text: "Login with:")
     
     private let emailLabel = UILabel(text: "Email")
     
     private let passwordLabel = UILabel(text: "Password")
     
     private let needAccountLabel = UILabel(text: "Need an Account")
-
-    private let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadowed: true)
     
     private let emailTextField = OneLineTextField(font: .avenir20())
     
@@ -42,7 +38,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        googleButton.customizeGoogleButton()
+        loginWithLabel.textAlignment = .center
         setUpConstraints()
         
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
@@ -85,15 +81,13 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func setUpConstraints() {
-        let loginWithView = ButtonFormView(label: loginWithLabel, button: googleButton)
         let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
         let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
         
         loginButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [
-        loginWithView,
-        orLabel,
+        loginWithLabel,
         emailStackView,
         passwordStackView,
         loginButton
