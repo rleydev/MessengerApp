@@ -61,6 +61,7 @@
 		97EF315128A4B6FA00D23BBB /* InsertableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */; };
 		97EF315328A4BB3900D23BBB /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315228A4BB3900D23BBB /* UIView+Extension.swift */; };
 		97EF315528A4C03E00D23BBB /* ChatRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */; };
+		97FB1D2928A9726300DBBF4D /* WaitingChatsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FB1D2828A9726300DBBF4D /* WaitingChatsNavigation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		97EF315028A4B6FA00D23BBB /* InsertableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertableTextField.swift; sourceTree = "<group>"; };
 		97EF315228A4BB3900D23BBB /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestViewController.swift; sourceTree = "<group>"; };
+		97FB1D2828A9726300DBBF4D /* WaitingChatsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatsNavigation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +310,7 @@
 			children = (
 				97CA8BFC28A3A7A500F66238 /* SelfConfigurationCell.swift */,
 				9717144228A520C200529FE9 /* AuthNavigationDelegate.swift */,
+				97FB1D2828A9726300DBBF4D /* WaitingChatsNavigation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				9744335228A221DB000A4196 /* UIFont+Extension.swift in Sources */,
 				9717143928A4E33800529FE9 /* AuthService.swift in Sources */,
 				9744336328A25AC6000A4196 /* LoginViewController.swift in Sources */,
+				97FB1D2928A9726300DBBF4D /* WaitingChatsNavigation.swift in Sources */,
 				9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
