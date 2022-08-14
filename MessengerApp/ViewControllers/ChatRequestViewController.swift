@@ -14,8 +14,8 @@ class ChatRequestViewController: UIViewController {
     private let nameLabel = UILabel(text: "Name Surname", font: .systemFont(ofSize: 20, weight: .light))
     private let aboutMeLabel = UILabel(text: "You have an opportunity to start a new chat", font: .systemFont(ofSize: 16, weight: .light))
     
-    private let acceptButton = UIButton(title: "Accept", titleColor: .white, backgroundColor: .black, font: .laoSangnamMN20(), isShadowed: false, corenerRadius: 10)
-    private let denyButton = UIButton(title: "Deny", titleColor: #colorLiteral(red: 0.8352941176, green: 0.2, blue: 0.2, alpha: 1), backgroundColor: .white, font: .laoSangnamMN20(), isShadowed: false, corenerRadius: 10)
+    private let acceptButton = UIButton(title: "Accept", titleColor: .white, backgroundColor: .black, font: .laoSangnamMN20(), isShadowed: false, cornerRadius: 10)
+    private let denyButton = UIButton(title: "Deny", titleColor: #colorLiteral(red: 0.8352941176, green: 0.2, blue: 0.2, alpha: 1), backgroundColor: .white, font: .laoSangnamMN20(), isShadowed: false, cornerRadius: 10)
     
     override func viewDidLoad() {
         super.viewDidLoad()

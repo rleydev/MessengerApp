@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 fileprivate enum Section: Int, CaseIterable {
     case users
@@ -19,11 +20,24 @@ fileprivate enum Section: Int, CaseIterable {
 
 class PeopleViewController: UIViewController {
     
-    private let users = Bundle.main.decode([MUser].self, from: "users.json")
+//    private let users = Bundle.main.decode([MUser].self, from: "users.json")
+    let users = [MUser]()
     
     private lazy var collectionView = UICollectionView()
     
     fileprivate var dataSource: UICollectionViewDiffableDataSource<Section, MUser>!
+    
+    private let currentUser: MUser
+    
+    init(currentUser: MUser) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+        title = currentUser.username
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +45,23 @@ class PeopleViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         reloadData(with: nil)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOutTapped))
+    }
+    
+    @objc private func signOutTapped() {
+        let alert = UIAlertController(title: nil, message: "Are you sure you want to sign out?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { _ in
+            do {
+                try Auth.auth().signOut()
+                UIApplication.shared.keyWindow?.rootViewController = AuthViewController()
+            } catch {
+                print("Error signing out \(error.localizedDescription)")
+            }
+        }))
+        
+        present(alert, animated: true, completion: nil)
     }
     
     private func setUpSearchBar() {

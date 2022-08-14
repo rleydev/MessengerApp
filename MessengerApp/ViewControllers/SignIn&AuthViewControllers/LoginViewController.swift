@@ -11,17 +11,13 @@ class LoginViewController: UIViewController {
     
     private let welcomeLabel = UILabel(text: "Welcome Back!", font: .avenir26())
     
-    private let loginWithLabel = UILabel(text: "Login with")
-    
-    private let orLabel = UILabel(text: "or")
+    private let loginWithLabel = UILabel(text: "Login with:")
     
     private let emailLabel = UILabel(text: "Email")
     
     private let passwordLabel = UILabel(text: "Password")
     
     private let needAccountLabel = UILabel(text: "Need an Account")
-
-    private let googleButton = UIButton(title: "Google", titleColor: .black, backgroundColor: .white, isShadowed: true)
     
     private let emailTextField = OneLineTextField(font: .avenir20())
     
@@ -37,11 +33,47 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    weak var delegate: AuthNavigationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        googleButton.customizeGoogleButton()
+        loginWithLabel.textAlignment = .center
         setUpConstraints()
+        
+        loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func loginButtonButtonTapped() {
+        print(#function)
+        AuthService.shared.login(email: emailTextField.text!, password: passwordTextField.text!) { (result) in
+            
+            switch result {
+            case .success(let user):
+                self.showAlert(with: "Success", and: "You are in your account") {
+                    FirestoreService.shared.getUserData(user: user) { (result) in
+                        switch result {
+                        case .success(let muser):
+                            let mainTabBar = MainTabBarController(currentUser: muser)
+                            mainTabBar.modalPresentationStyle = .fullScreen
+                            self.present(mainTabBar, animated: true, completion: nil)
+                        case .failure(let error):
+                            self.present(SetUpProfileViewController(currentUser: user), animated: true, completion: nil)
+                        }
+                    }
+                }
+                
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        }
+    }
+    
+    @objc private func signUpButtonTapped() {
+        dismiss(animated: true) {
+            self.delegate?.toSignUpVC()
+        }
     }
 }
 
@@ -49,15 +81,13 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     
     private func setUpConstraints() {
-        let loginWithView = ButtonFormView(label: loginWithLabel, button: googleButton)
         let emailStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField], axis: .vertical, spacing: 0)
         let passwordStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField], axis: .vertical, spacing: 0)
         
         loginButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [
-        loginWithView,
-        orLabel,
+        loginWithLabel,
         emailStackView,
         passwordStackView,
         loginButton
@@ -87,7 +117,7 @@ extension LoginViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
             
-            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 60),
+            bottomStackView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 15),
             bottomStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             bottomStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
@@ -116,4 +146,5 @@ struct LoginViewControllerProvider: PreviewProvider {
         }
     }
 }
+
 
