@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 fileprivate enum Section: Int, CaseIterable {
     case users
@@ -21,7 +22,9 @@ fileprivate enum Section: Int, CaseIterable {
 class PeopleViewController: UIViewController {
     
 //    private let users = Bundle.main.decode([MUser].self, from: "users.json")
-    let users = [MUser]()
+    var users = [MUser]()
+    
+    private var usersListener: ListenerRegistration?
     
     private lazy var collectionView = UICollectionView()
     
@@ -35,6 +38,10 @@ class PeopleViewController: UIViewController {
         title = currentUser.username
     }
     
+    deinit {
+        usersListener?.remove()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -44,9 +51,19 @@ class PeopleViewController: UIViewController {
         setUpSearchBar()
         setupCollectionView()
         createDataSource()
-        reloadData(with: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .plain, target: self, action: #selector(signOutTapped))
+        
+        usersListener = ListenerService.shared.userObserve(users: users, completion: { result in
+            
+            switch result {
+            case .success(let users):
+                self.users = users
+                self.reloadData(with: nil)
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        })
     }
     
     @objc private func signOutTapped() {
