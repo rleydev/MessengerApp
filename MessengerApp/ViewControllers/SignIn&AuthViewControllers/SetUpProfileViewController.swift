@@ -41,10 +41,18 @@ class SetUpProfileViewController: UIViewController {
         view.backgroundColor = .white
         setUpConstraints()
         goToChatsButton.addTarget(self, action: #selector(goToChatsButtonTapped), for: .touchUpInside)
+        fullImageView.plusButton.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func plusButtonTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
     }
     
     @objc private func goToChatsButtonTapped() {
-        FirestoreService.shared.saveProfileWith(id: currentUser.uid, email: currentUser.email!, username: fullNameTextField.text, avatarImageString: nil, description: aboutMeTextField.text, sex: sexSegmentedControll.titleForSegment(at: sexSegmentedControll.selectedSegmentIndex)) { (result) in
+        FirestoreService.shared.saveProfileWith(id: currentUser.uid, email: currentUser.email!, username: fullNameTextField.text, avatarImage: fullImageView.circleImageView.image, description: aboutMeTextField.text, sex: sexSegmentedControll.titleForSegment(at: sexSegmentedControll.selectedSegmentIndex)) { (result) in
             switch result {
             case .success(let muser):
                 self.showAlert(with: "Success!", and: "Have a nice chat") {
@@ -52,8 +60,8 @@ class SetUpProfileViewController: UIViewController {
                     mainTabBar.modalPresentationStyle = .fullScreen
                     self.present(mainTabBar, animated: true, completion: nil)
                 }
-            case .failure(_):
-                self.showAlert(with: "Error!", and: "")
+            case .failure(let error):
+                self.showAlert(with: "Error!", and: error.localizedDescription)
             }
         }
     }
@@ -96,6 +104,18 @@ extension SetUpProfileViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
         ])
+    }
+}
+
+
+extension SetUpProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        fullImageView.circleImageView.image = image
     }
 }
 
