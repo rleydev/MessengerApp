@@ -23,8 +23,8 @@ fileprivate enum Section: Int, CaseIterable {
 
 class ListViewController: UIViewController {
     
-    private let activeChats = Bundle.main.decode([MChat].self, from: "activeChats.json")
-    private let waitingChats = Bundle.main.decode([MChat].self, from: "waitingChats.json")
+    private let activeChats = [MChat]()
+    private let waitingChats = [MChat]()
     
     fileprivate var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     private var collectionView: UICollectionView!

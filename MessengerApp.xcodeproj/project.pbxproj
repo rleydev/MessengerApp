@@ -48,6 +48,8 @@
 		9777339628A8E0B000AF4576 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339528A8E0B000AF4576 /* UIImage+Extension.swift */; };
 		9777339828A8FEF900AF4576 /* ListenerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339728A8FEF900AF4576 /* ListenerService.swift */; };
 		9777339B28A903BD00AF4576 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9777339A28A903BD00AF4576 /* SDWebImage */; };
+		9777339D28A90D3300AF4576 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */; };
+		9777339F28A9105C00AF4576 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339E28A9105C00AF4576 /* MMessage.swift */; };
 		97CA64A628A375EC00C51FA7 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64A528A375EC00C51FA7 /* waitingChats.json */; };
 		97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */; };
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
@@ -101,6 +103,8 @@
 		9777339328A8DD2500AF4576 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		9777339528A8E0B000AF4576 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9777339728A8FEF900AF4576 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
+		9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		9777339E28A9105C00AF4576 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
 		97CA64A528A375EC00C51FA7 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				9744336828A26FCC000A4196 /* SegmentedControll+Extension.swift */,
 				9744334F28A21F9A000A4196 /* UIButton+Extension.swift */,
 				9744335328A223BB000A4196 /* UIColor+Extension.swift */,
+				9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */,
 				9744335B28A234EF000A4196 /* StackView+extension.swift */,
 				9744335528A2268A000A4196 /* UILabel+Extension.swift */,
 				9744335728A22774000A4196 /* UIImageView+Extension.swift */,
@@ -283,6 +288,7 @@
 			children = (
 				9765529928A3B19F0025D80A /* MUser.swift */,
 				9765529B28A3B1A50025D80A /* MChat.swift */,
+				9777339E28A9105C00AF4576 /* MMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,6 +414,7 @@
 				97EF315128A4B6FA00D23BBB /* InsertableTextField.swift in Sources */,
 				9744336528A26295000A4196 /* SetUpProfileViewController.swift in Sources */,
 				9717144528A523A300529FE9 /* FirestoreService.swift in Sources */,
+				9777339D28A90D3300AF4576 /* UIApplication+Extension.swift in Sources */,
 				9744337028A28013000A4196 /* PeopleViewController.swift in Sources */,
 				97EF314F28A4B17300D23BBB /* ProfileViewController.swift in Sources */,
 				9744336728A264B5000A4196 /* PhotoView.swift in Sources */,
@@ -428,6 +435,7 @@
 				9744333828A215FA000A4196 /* AppDelegate.swift in Sources */,
 				9744335628A2268A000A4196 /* UILabel+Extension.swift in Sources */,
 				9744335428A223BB000A4196 /* UIColor+Extension.swift in Sources */,
+				9777339F28A9105C00AF4576 /* MMessage.swift in Sources */,
 				9744335228A221DB000A4196 /* UIFont+Extension.swift in Sources */,
 				9717143928A4E33800529FE9 /* AuthService.swift in Sources */,
 				9744336328A25AC6000A4196 /* LoginViewController.swift in Sources */,
