@@ -24,10 +24,11 @@ fileprivate enum Section: Int, CaseIterable {
 
 class ListViewController: UIViewController {
     
-    private let activeChats = [MChat]()
+    private var activeChats = [MChat]()
     private var waitingChats = [MChat]()
     
     private var waitingChatsListener: ListenerRegistration?
+    private var activeChatsListener: ListenerRegistration?
     
     fileprivate var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     private var collectionView: UICollectionView!
@@ -46,6 +47,7 @@ class ListViewController: UIViewController {
     
     deinit {
         waitingChatsListener?.remove()
+        activeChatsListener?.remove()
     }
     
     override func viewDidLoad() {
@@ -55,6 +57,7 @@ class ListViewController: UIViewController {
         setupCollectionView()
         createDataSource()
         reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +72,16 @@ class ListViewController: UIViewController {
                     chatVC.delegate = self
                     self.present(chatVC, animated: true, completion: nil)
                 }
+                self.reloadData()
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        })
+        
+        activeChatsListener = ListenerService.shared.activeChatsObserve(chats: activeChats, completion: { result in
+            switch result {
+            case .success(let chats):
+                self.activeChats = chats
                 self.reloadData()
             case .failure(let error):
                 self.showAlert(with: "Error", and: error.localizedDescription)
@@ -245,7 +258,15 @@ extension ListViewController: WaitingChatsNavigation {
     }
     
     func chatToActive(chat: MChat) {
-//       
+        FirestoreService.shared.changeToActive(chat: chat) { result in
+            switch result {
+                
+            case .success():
+                self.showAlert(with: "Success!", and: "Good to chat with \(chat.friendUsername)!")
+            case .failure(let error):
+                self.showAlert(with: "Error", and: error.localizedDescription)
+            }
+        }
     }
     
     

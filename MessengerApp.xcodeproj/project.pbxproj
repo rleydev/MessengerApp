@@ -274,11 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				9744336C28A27F7E000A4196 /* SignIn&AuthViewControllers */,
-				9744336A28A27B21000A4196 /* ListViewController.swift */,
-				9744336F28A28013000A4196 /* PeopleViewController.swift */,
-				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
-				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
-				97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */,
+				97FB1D2A28A97C6C00DBBF4D /* MainViewControllers */,
 				97CA8BF528A37DBF00F66238 /* Cell */,
 				9765529528A3B0B10025D80A /* SectionHeader */,
 			);
@@ -313,6 +309,18 @@
 				97FB1D2828A9726300DBBF4D /* WaitingChatsNavigation.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		97FB1D2A28A97C6C00DBBF4D /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9744336A28A27B21000A4196 /* ListViewController.swift */,
+				9744336F28A28013000A4196 /* PeopleViewController.swift */,
+				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
+				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
+				97EF315428A4C03E00D23BBB /* ChatRequestViewController.swift */,
+			);
+			path = MainViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
