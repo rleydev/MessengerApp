@@ -50,6 +50,8 @@
 		9777339B28A903BD00AF4576 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 9777339A28A903BD00AF4576 /* SDWebImage */; };
 		9777339D28A90D3300AF4576 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */; };
 		9777339F28A9105C00AF4576 /* MMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777339E28A9105C00AF4576 /* MMessage.swift */; };
+		97A10B0428AA1F34006254FB /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A10B0328AA1F34006254FB /* ChatsViewController.swift */; };
+		97A10B0728AA2266006254FB /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 97A10B0628AA2266006254FB /* MessageKit */; };
 		97CA64A628A375EC00C51FA7 /* waitingChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64A528A375EC00C51FA7 /* waitingChats.json */; };
 		97CA64AA28A3763F00C51FA7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */; };
 		97CA64AC28A3773000C51FA7 /* activeChats.json in Resources */ = {isa = PBXBuildFile; fileRef = 97CA64AB28A3773000C51FA7 /* activeChats.json */; };
@@ -106,6 +108,7 @@
 		9777339728A8FEF900AF4576 /* ListenerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListenerService.swift; sourceTree = "<group>"; };
 		9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		9777339E28A9105C00AF4576 /* MMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMessage.swift; sourceTree = "<group>"; };
+		97A10B0328AA1F34006254FB /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		97CA64A528A375EC00C51FA7 /* waitingChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waitingChats.json; sourceTree = "<group>"; };
 		97CA64A928A3763F00C51FA7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		97CA64AB28A3773000C51FA7 /* activeChats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = activeChats.json; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				9777339028A8DCD200AF4576 /* FirebaseFirestore in Frameworks */,
 				9777339B28A903BD00AF4576 /* SDWebImage in Frameworks */,
 				9777339228A8DCD200AF4576 /* FirebaseStorage in Frameworks */,
+				97A10B0728AA2266006254FB /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				9744336A28A27B21000A4196 /* ListViewController.swift */,
+				97A10B0328AA1F34006254FB /* ChatsViewController.swift */,
 				9744336F28A28013000A4196 /* PeopleViewController.swift */,
 				9744336D28A27FB3000A4196 /* MainTabBarController.swift */,
 				97EF314E28A4B17300D23BBB /* ProfileViewController.swift */,
@@ -344,6 +349,7 @@
 				9777338F28A8DCD200AF4576 /* FirebaseFirestore */,
 				9777339128A8DCD200AF4576 /* FirebaseStorage */,
 				9777339A28A903BD00AF4576 /* SDWebImage */,
+				97A10B0628AA2266006254FB /* MessageKit */,
 			);
 			productName = MessengerApp;
 			productReference = 9744333428A215FA000A4196 /* MessengerApp.app */;
@@ -376,6 +382,7 @@
 			packageReferences = (
 				9777338C28A8DCD200AF4576 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				9777339928A903BD00AF4576 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				97A10B0528AA2266006254FB /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = 9744333528A215FA000A4196 /* Products */;
 			projectDirPath = "";
@@ -435,6 +442,7 @@
 				9744335C28A234EF000A4196 /* StackView+extension.swift in Sources */,
 				9717144C28A526AF00529FE9 /* UserError.swift in Sources */,
 				97EF315328A4BB3900D23BBB /* UIView+Extension.swift in Sources */,
+				97A10B0428AA1F34006254FB /* ChatsViewController.swift in Sources */,
 				9744335028A21F9A000A4196 /* UIButton+Extension.swift in Sources */,
 				9744336928A26FCC000A4196 /* SegmentedControll+Extension.swift in Sources */,
 				9744335828A22774000A4196 /* UIImageView+Extension.swift in Sources */,
@@ -681,6 +689,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		97A10B0528AA2266006254FB /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -703,6 +719,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9777339928A903BD00AF4576 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		97A10B0628AA2266006254FB /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A10B0528AA2266006254FB /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
