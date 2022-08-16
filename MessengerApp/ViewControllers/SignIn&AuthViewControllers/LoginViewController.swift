@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
         
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        passwordTextField.isSecureTextEntry = true
     }
     
     @objc private func loginButtonButtonTapped() {
