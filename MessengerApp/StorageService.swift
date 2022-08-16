@@ -19,6 +19,10 @@ class StorageService {
         return storageRef.child("avatars")
     }
     
+    private var chatsRef: StorageReference {
+        return storageRef.child("chats")
+    }
+    
     private var currrentUSerId: String {
         return Auth.auth().currentUser!.uid
     }
@@ -44,6 +48,43 @@ class StorageService {
                 
                 completion(.success(dowbloadURL))
             }
+        }
+    }
+    
+    func uploadImageMessage(photo: UIImage, to chat: MChat, completion: @escaping (Result<URL, Error>) -> Void) {
+        
+        guard let scaledImage = photo.scaledToSafeUploadSize, let imageData = scaledImage.jpegData(compressionQuality: 0.4) else { return }
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+
+        let imageName = [UUID().uuidString, String(Date().timeIntervalSince1970)].joined()
+        let uid: String = Auth.auth().currentUser!.uid
+        let chatName = [chat.friendUsername, uid].joined()
+        self.chatsRef.child(chatName).child(imageName).putData(imageData, metadata: metaData) { metadata, error in
+            guard let _ = metadata else {
+                completion(.failure(error!))
+                return
+            }
+            self.chatsRef.child(chatName).child(imageName).downloadURL { url, error in
+                guard let downloadURL = url else {
+                    completion(.failure(error!))
+                    return
+                }
+                completion(.success(downloadURL))
+            }
+        }
+    }
+    
+    func downloadImage(url: URL, completion: @escaping (Result<UIImage?, Error>) -> Void) {
+        let ref = Storage.storage().reference(forURL: url.absoluteString)
+        let megaByte = Int64(1 * 1024 * 1024)
+        ref.getData(maxSize: megaByte) { data, error in
+            guard let imageData = data else {
+                completion(.failure(error!))
+                return
+            }
+            completion(.success(UIImage(data: imageData)))
         }
     }
 }

@@ -14,6 +14,7 @@
 		9717144328A520C200529FE9 /* AuthNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717144228A520C200529FE9 /* AuthNavigationDelegate.swift */; };
 		9717144528A523A300529FE9 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717144428A523A300529FE9 /* FirestoreService.swift */; };
 		9717144C28A526AF00529FE9 /* UserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9717144B28A526AF00529FE9 /* UserError.swift */; };
+		971CA35C28ABAF8300199089 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CA35B28ABAF8300199089 /* UIScrollView+Extension.swift */; };
 		9744333828A215FA000A4196 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333728A215FA000A4196 /* AppDelegate.swift */; };
 		9744333A28A215FA000A4196 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333928A215FA000A4196 /* SceneDelegate.swift */; };
 		9744333C28A215FA000A4196 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744333B28A215FA000A4196 /* AuthViewController.swift */; };
@@ -75,6 +76,7 @@
 		9717144228A520C200529FE9 /* AuthNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNavigationDelegate.swift; sourceTree = "<group>"; };
 		9717144428A523A300529FE9 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		9717144B28A526AF00529FE9 /* UserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserError.swift; sourceTree = "<group>"; };
+		971CA35B28ABAF8300199089 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		9744333428A215FA000A4196 /* MessengerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessengerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9744333728A215FA000A4196 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9744333928A215FA000A4196 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				9744336828A26FCC000A4196 /* SegmentedControll+Extension.swift */,
 				9744334F28A21F9A000A4196 /* UIButton+Extension.swift */,
 				9744335328A223BB000A4196 /* UIColor+Extension.swift */,
+				971CA35B28ABAF8300199089 /* UIScrollView+Extension.swift */,
 				9777339C28A90D3300AF4576 /* UIApplication+Extension.swift */,
 				9744335B28A234EF000A4196 /* StackView+extension.swift */,
 				9744335528A2268A000A4196 /* UILabel+Extension.swift */,
@@ -424,6 +427,7 @@
 				976552A128A3CC0C0025D80A /* UIViewController+Extension.swift in Sources */,
 				9777339828A8FEF900AF4576 /* ListenerService.swift in Sources */,
 				9777339428A8DD2500AF4576 /* StorageService.swift in Sources */,
+				971CA35C28ABAF8300199089 /* UIScrollView+Extension.swift in Sources */,
 				97CA8BF928A3A1D100F66238 /* GradientView.swift in Sources */,
 				9717144128A507AF00529FE9 /* AuthError.swift in Sources */,
 				9744336E28A27FB3000A4196 /* MainTabBarController.swift in Sources */,
