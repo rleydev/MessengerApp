@@ -30,7 +30,7 @@ class ListViewController: UIViewController {
     private var waitingChatsListener: ListenerRegistration?
     private var activeChatsListener: ListenerRegistration?
     
-    fileprivate var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
+    private var dataSource: UICollectionViewDiffableDataSource<Section, MChat>?
     private var collectionView: UICollectionView!
     
     private let currentUser: MUser

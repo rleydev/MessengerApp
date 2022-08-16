@@ -9,10 +9,10 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    private let signUpVC = SignUpViewController()
-    private let loginVC = LoginViewController()
+    let signUpVC = SignUpViewController()
+    let loginVC = LoginViewController()
     
-    private let messangerDescriptionLabel = UILabel(text: "Get started with")
+    private let messangerDescriptionLabel = UILabel(text: "App info:")
     
     private let emailLabel = UILabel(text: "Sign Up with")
     
@@ -22,7 +22,7 @@ class AuthViewController: UIViewController {
     
     private let loginButton = UIButton(title: "Login", titleColor: .buttonRed(), backgroundColor: .white, isShadowed: true)
     
-    private let messengerAppInfo = UIButton(title: "Messenger App", titleColor: .black, backgroundColor: .white, isShadowed: true)
+    private let messengerAppInfo = UIButton(title: "Messenger App", titleColor: .white, backgroundColor: .darkGray, isShadowed: false)
     
     private let logoImageView = UIImageView(image: #imageLiteral(resourceName: "chat-box"), contentMode: .scaleAspectFit)
     
@@ -61,7 +61,7 @@ class AuthViewController: UIViewController {
 
 extension AuthViewController {
     @objc private func showMessengerAppInfo() {
-        let alert = UIAlertController(title: "@MessengerApp Info", message: "The application was developed by Arthur Lee (GitHub: @rleydev)", preferredStyle: .alert)
+        let alert = UIAlertController(title: "MessengerApp Info", message: "The application was developed by Arthur Lee (GitHub: @rleydev). All data stored in Firebase", preferredStyle: .alert)
         let action = UIAlertAction(title: "Return back", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
@@ -91,19 +91,6 @@ extension AuthViewController {
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
         ])
     }
-}
-
-
-extension AuthViewController: AuthNavigationDelegate {
-    func toLogVC() {
-        present(loginVC, animated: true, completion: nil)
-    }
-    
-    func toSignUpVC() {
-        present(signUpVC, animated: true, completion: nil)
-    }
-    
-    
 }
 
 import SwiftUI
