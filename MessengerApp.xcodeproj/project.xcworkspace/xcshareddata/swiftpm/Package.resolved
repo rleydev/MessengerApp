@@ -74,12 +74,30 @@
         }
       },
       {
+        "package": "InputBarAccessoryView",
+        "repositoryURL": "https://github.com/nathantannar4/InputBarAccessoryView",
+        "state": {
+          "branch": null,
+          "revision": "e5da8c5e3c6ff2740ec2b721dd71e2cf24053001",
+          "version": "6.1.0"
+        }
+      },
+      {
         "package": "leveldb",
         "repositoryURL": "https://github.com/firebase/leveldb.git",
         "state": {
           "branch": null,
           "revision": "0706abcc6b0bd9cedfbb015ba840e4a780b5159b",
           "version": "1.22.2"
+        }
+      },
+      {
+        "package": "MessageKit",
+        "repositoryURL": "https://github.com/MessageKit/MessageKit",
+        "state": {
+          "branch": null,
+          "revision": "f3f61ebbc9c56533700c2e7b5742682849cc314d",
+          "version": "4.0.0"
         }
       },
       {
@@ -98,6 +116,15 @@
           "branch": null,
           "revision": "3e4e743631e86c8c70dbc6efdc7beaa6e90fd3bb",
           "version": "2.1.1"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "3e48cb68d8e668d146dc59c73fb98cb628616236",
+          "version": "5.13.2"
         }
       },
       {
