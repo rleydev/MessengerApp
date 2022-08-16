@@ -10,9 +10,9 @@ import FirebaseFirestore
 import MessageKit
 
 struct MMessage: Hashable, MessageType {
-    
-    var sender: SenderType
+   
     let content: String
+    var sender: SenderType
     var sentDate: Date
     let id: String?
     
@@ -35,23 +35,22 @@ struct MMessage: Hashable, MessageType {
         let data = document.data()
         guard let sentDate = data["created"] as? Timestamp else { return nil }
         guard let senderId = data["senderID"] as? String else { return nil }
-        guard let senderUsername = data["senderName"] as? String else { return nil }
+        guard let senderName = data["senderName"] as? String else { return nil }
         guard let content = data["content"] as? String else { return nil }
         
         self.id = document.documentID
         self.sentDate = sentDate.dateValue()
-        sender = Sender(senderId: senderId, displayName: senderUsername)
+        sender = Sender(senderId: senderId, displayName: senderName)
         self.content = content
     }
     
     var representation: [String: Any] {
-        var rep: [String: Any] = [
+        let rep: [String: Any] = [
             "created": sentDate,
             "senderID": sender.senderId,
             "senderName": sender.displayName,
-            "content": content 
+            "content": content
         ]
-        
         return rep
     }
     
@@ -65,9 +64,7 @@ struct MMessage: Hashable, MessageType {
 }
 
 extension MMessage: Comparable {
-    
     static func < (lhs: MMessage, rhs: MMessage) -> Bool {
         return lhs.sentDate < rhs.sentDate
     }
-
 }

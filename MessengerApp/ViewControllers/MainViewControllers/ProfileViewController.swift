@@ -39,7 +39,7 @@ class ProfileViewController: UIViewController {
     
     private func setUpUI() {
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = .mainWhite()
+        containerView.backgroundColor = .white
         containerView.layer.cornerRadius = 30
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,15 +62,14 @@ class ProfileViewController: UIViewController {
         
         self.dismiss(animated: true) {
             FirestoreService.shared.createWaitingChat(message: message, receiver: self.user) { result in
+                
                 switch result {
-                    
                 case .success():
                     UIApplication.getTopViewController()?.showAlert(with: "Success!", and: "Your message was sent to \(self.user.username)")
                 case .failure(let error):
                     UIApplication.getTopViewController()?.showAlert(with: "Error", and: error.localizedDescription)
                 }
             }
-            
         }
     }
     
@@ -119,17 +118,17 @@ extension ProfileViewController {
 //    static var previews: some View {
 //        ContainerView().edgesIgnoringSafeArea(.all)
 //    }
-//    
+//
 //    struct ContainerView: UIViewControllerRepresentable {
-//        
+//
 //        let viewController = ProfileViewController()
-//        
+//
 //        func makeUIViewController(context: Context) -> some UIViewController {
 //            return viewController
 //        }
-//        
+//
 //        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-//            
+//
 //        }
 //    }
 //}
