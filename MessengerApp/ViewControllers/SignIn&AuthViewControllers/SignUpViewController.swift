@@ -43,39 +43,32 @@ class SignUpViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
-        
+
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
         
+        
 //        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
-        addObservers()
+//        addObservers()
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
     }
     
-    private func addObservers() {
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) {
-                notification in
-                self.keyboardWillShow(notification: notification)
-            }
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) {
-                notification in
-                self.keyboardWillHide(notification: notification)
-            }
-        }
-    func keyboardWillShow(notification: Notification) {
-            guard let userInfo = notification.userInfo,
-                  let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-                    return
-            }
-            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
-            scrollView.contentInset = contentInset
-        }
-        
-    func keyboardWillHide(notification: Notification) {
-        scrollView.contentInset = UIEdgeInsets.zero
-    }
+//    private func addObservers() {
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+//        }
+//
+//    @objc private func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+//            self.view.frame.origin.y -= keyboardSize.width + 15
+//        }
+//    }
+//
+//    @objc private func keyboardWillHide(notification: NSNotification) {
+//        self.view.frame.origin.y = 0
+//    }
     
 //    @objc func handleTap(_ sender: UITapGestureRecognizer){
 //        if sender.state == .ended {
@@ -190,16 +183,20 @@ extension SignUpViewController: UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         if textField.text == emailTextField.text {
             textField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
         } else if textField.text == passwordTextField.text {
             textField.resignFirstResponder()
-            confirmPasswordTextField.resignFirstResponder()
+            confirmPasswordTextField.becomeFirstResponder()
         } else {
             signUpButtonTapped()
         }
+        
         return true
+        
+        
     }
 }
                           
