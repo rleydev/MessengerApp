@@ -41,8 +41,15 @@ class LoginViewController: UIViewController {
         loginWithLabel.textAlignment = .center
         setUpConstraints()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        passwordTextField.isSecureTextEntry = true
+        
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        
+        
     }
     
     @objc private func loginButtonButtonTapped() {
@@ -148,3 +155,20 @@ struct LoginViewControllerProvider: PreviewProvider {
 }
 
 
+extension LoginViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == emailTextField.text {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else {
+            loginButtonButtonTapped()
+        }
+        return true
+    }
+}

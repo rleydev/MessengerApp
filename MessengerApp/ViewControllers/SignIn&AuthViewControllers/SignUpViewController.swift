@@ -9,6 +9,8 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    private let scrollView = UIScrollView()
+    
     private let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
     
     private let emailLabel = UILabel(text: "Email")
@@ -38,9 +40,49 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
+        
+//        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
+        
+        addObservers()
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
     }
+    
+    private func addObservers() {
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) {
+                notification in
+                self.keyboardWillShow(notification: notification)
+            }
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) {
+                notification in
+                self.keyboardWillHide(notification: notification)
+            }
+        }
+    func keyboardWillShow(notification: Notification) {
+            guard let userInfo = notification.userInfo,
+                  let frame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
+                    return
+            }
+            let contentInset = UIEdgeInsets(top: 0, left: 0, bottom: frame.height, right: 0)
+            scrollView.contentInset = contentInset
+        }
+        
+    func keyboardWillHide(notification: Notification) {
+        scrollView.contentInset = UIEdgeInsets.zero
+    }
+    
+//    @objc func handleTap(_ sender: UITapGestureRecognizer){
+//        if sender.state == .ended {
+//            view.endEditing(true)
+//        }
+//    }
+
     
     @objc private func signUpButtonTapped() {
         AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { (result) in
@@ -137,6 +179,27 @@ struct SignUpViewControllerProvider: PreviewProvider {
         func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
             
         }
+    }
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == emailTextField.text {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else if textField.text == passwordTextField.text {
+            textField.resignFirstResponder()
+            confirmPasswordTextField.resignFirstResponder()
+        } else {
+            signUpButtonTapped()
+        }
+        return true
     }
 }
                           
