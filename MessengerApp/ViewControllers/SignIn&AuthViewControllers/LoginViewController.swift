@@ -41,15 +41,25 @@ class LoginViewController: UIViewController {
         loginWithLabel.textAlignment = .center
         setUpConstraints()
         
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        
-        passwordTextField.isSecureTextEntry = true
+        setUpKeyboard()
         
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         
         
+    }
+    
+    private func setUpKeyboard() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        passwordTextField.isSecureTextEntry = true
+        
+        emailTextField.autocapitalizationType = .none
+        passwordTextField.autocapitalizationType = .none
+        
+        emailTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
     }
     
     @objc private func loginButtonButtonTapped() {

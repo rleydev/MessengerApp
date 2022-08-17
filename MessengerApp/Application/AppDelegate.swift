@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         IQKeyboardManager.shared.enable.toggle()
+        IQKeyboardManager.shared.enableAutoToolbar.toggle()
         
         return true
     }

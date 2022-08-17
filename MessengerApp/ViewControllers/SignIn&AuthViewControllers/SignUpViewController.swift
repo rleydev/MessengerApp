@@ -9,8 +9,6 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    private let scrollView = UIScrollView()
-    
     private let welcomeLabel = UILabel(text: "Good to see you!", font: .avenir26())
     
     private let emailLabel = UILabel(text: "Email")
@@ -40,6 +38,13 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         
+        setUpKeyboard()
+        
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
+    }
+    
+    private func setUpKeyboard() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
@@ -47,34 +52,14 @@ class SignUpViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         confirmPasswordTextField.isSecureTextEntry = true
         
+        emailTextField.autocapitalizationType = .none
+        passwordTextField.autocapitalizationType = .none
+        confirmPasswordTextField.autocapitalizationType = .none
         
-//        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-        
-//        addObservers()
-        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
+        emailTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
+        confirmPasswordTextField.autocorrectionType = .no
     }
-    
-//    private func addObservers() {
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//        }
-//
-//    @objc private func keyboardWillShow(notification: NSNotification) {
-//        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-//            self.view.frame.origin.y -= keyboardSize.width + 15
-//        }
-//    }
-//
-//    @objc private func keyboardWillHide(notification: NSNotification) {
-//        self.view.frame.origin.y = 0
-//    }
-    
-//    @objc func handleTap(_ sender: UITapGestureRecognizer){
-//        if sender.state == .ended {
-//            view.endEditing(true)
-//        }
-//    }
 
     
     @objc private func signUpButtonTapped() {
