@@ -21,7 +21,6 @@ fileprivate enum Section: Int, CaseIterable {
 
 class PeopleViewController: UIViewController {
     
-//    private let users = Bundle.main.decode([MUser].self, from: "users.json")
     var users = [MUser]()
     
     private var usersListener: ListenerRegistration?

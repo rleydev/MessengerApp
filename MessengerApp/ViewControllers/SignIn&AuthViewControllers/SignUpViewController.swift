@@ -38,9 +38,29 @@ class SignUpViewController: UIViewController {
         view.backgroundColor = .white
         setupConstraints()
         
+        setUpKeyboard()
+        
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginButtinTapped), for: .touchUpInside)
     }
+    
+    private func setUpKeyboard() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
+        
+        emailTextField.autocapitalizationType = .none
+        passwordTextField.autocapitalizationType = .none
+        confirmPasswordTextField.autocapitalizationType = .none
+        
+        emailTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
+        confirmPasswordTextField.autocorrectionType = .no
+    }
+
     
     @objc private func signUpButtonTapped() {
         AuthService.shared.register(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text) { (result) in
@@ -139,15 +159,30 @@ struct SignUpViewControllerProvider: PreviewProvider {
         }
     }
 }
-                          
-                          
-extension UIViewController {
-    func showAlert(with title: String, and message: String, completion: @escaping () -> Void = { }) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "Ok", style: .default) { _ in
-            completion()
+
+extension SignUpViewController: UITextFieldDelegate {
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.text == emailTextField.text {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else if textField.text == passwordTextField.text {
+            textField.resignFirstResponder()
+            confirmPasswordTextField.becomeFirstResponder()
+        } else {
+            signUpButtonTapped()
         }
-        alert.addAction(ok)
-        present(alert, animated: true, completion: nil)
+        
+        return true
+        
+        
     }
 }
+                          
+                          

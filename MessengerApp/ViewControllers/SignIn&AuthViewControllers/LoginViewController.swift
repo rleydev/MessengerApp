@@ -41,8 +41,25 @@ class LoginViewController: UIViewController {
         loginWithLabel.textAlignment = .center
         setUpConstraints()
         
+        setUpKeyboard()
+        
         loginButton.addTarget(self, action: #selector(loginButtonButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        
+        
+    }
+    
+    private func setUpKeyboard() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        passwordTextField.isSecureTextEntry = true
+        
+        emailTextField.autocapitalizationType = .none
+        passwordTextField.autocapitalizationType = .none
+        
+        emailTextField.autocorrectionType = .no
+        passwordTextField.autocorrectionType = .no
     }
     
     @objc private func loginButtonButtonTapped() {
@@ -58,7 +75,7 @@ class LoginViewController: UIViewController {
                             let mainTabBar = MainTabBarController(currentUser: muser)
                             mainTabBar.modalPresentationStyle = .fullScreen
                             self.present(mainTabBar, animated: true, completion: nil)
-                        case .failure(let error):
+                        case .failure(_):
                             self.present(SetUpProfileViewController(currentUser: user), animated: true, completion: nil)
                         }
                     }
@@ -148,3 +165,20 @@ struct LoginViewControllerProvider: PreviewProvider {
 }
 
 
+extension LoginViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text == emailTextField.text {
+            textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else {
+            loginButtonButtonTapped()
+        }
+        return true
+    }
+}

@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class SetUpProfileViewController: UIViewController {
     
-    private let fullImageView = PhotoView()
+    let fullImageView = PhotoView()
     
     private let welcomeLabel = UILabel(text: "Set up your Profile!", font: .avenir26())
     private let fullNameLabel = UILabel(text: "Full Name")
@@ -112,18 +112,6 @@ extension SetUpProfileViewController {
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
         ])
-    }
-}
-
-
-extension SetUpProfileViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        picker.dismiss(animated: true, completion: nil)
-        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
-            return
-        }
-        fullImageView.circleImageView.image = image
     }
 }
 
