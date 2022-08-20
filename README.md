@@ -18,10 +18,10 @@
 </p>
     <p align="center">
     
-<img src= "Screenshots/MessengerAppSignUp.gif" width="150">
-<img src= "Screenshots/MessengerAppSignIp.gif" width="150">
-<img src= "Screenshots/realtimechatAnn.gif" width="150">
-<img src= "Screenshots/realtimechatJane.gif" width="150">
+<img src= "Screenshots/MessengerAppSignUp.gif" width="200">
+<img src= "Screenshots/MessengerAppSignIn.gif" width="200">
+<img src= "Screenshots/realtimechatAnn.gif" width="200">
+<img src= "Screenshots/realtimechatJane.gif" width="200">
 
 </p>
 
