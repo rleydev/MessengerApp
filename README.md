@@ -10,11 +10,18 @@
 <img src= "Screenshots/auth.png" width="250">
 <img src= "Screenshots/set_up_profile.png" width="250">
 <img src= "Screenshots/chat.png" width="250">
+
 </p>
-
-<p align="center">
-<img src= "Screenshots/MessengerAppSignUp.gif" width="250">
-
+    <p align="center">
+        Registration, authentification and real time chat 
+    </p>
+</p>
+    <p align="center">
+    
+<img src= "Screenshots/MessengerAppSignUp.gif" width="150">
+<img src= "Screenshots/MessengerAppSignIp.gif" width="150">
+<img src= "Screenshots/realtimechatAnn.gif" width="150">
+<img src= "Screenshots/realltimechatJane.gif" width="150">
 
 </p>
 
