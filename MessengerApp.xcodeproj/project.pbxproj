@@ -150,18 +150,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		9717143728A4E31300529FE9 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				9777339328A8DD2500AF4576 /* StorageService.swift */,
-				9777339728A8FEF900AF4576 /* ListenerService.swift */,
-				9717144428A523A300529FE9 /* FirestoreService.swift */,
-				9717143828A4E33800529FE9 /* AuthService.swift */,
-			);
-			name = Services;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		9717143F28A5072A00529FE9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +212,7 @@
 		9744334D28A21F75000A4196 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				9717143728A4E31300529FE9 /* Services */,
+				978DEBEE28B1719200DD3712 /* New Group */,
 				9717143F28A5072A00529FE9 /* Helpers */,
 				97CA8BFE28A3A7BB00F66238 /* Protocols */,
 				9744334E28A21F7B000A4196 /* Extensions */,
@@ -303,6 +291,17 @@
 				9777339E28A9105C00AF4576 /* MMessage.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		978DEBEE28B1719200DD3712 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9717144428A523A300529FE9 /* FirestoreService.swift */,
+				9717143828A4E33800529FE9 /* AuthService.swift */,
+				9777339728A8FEF900AF4576 /* ListenerService.swift */,
+				9777339328A8DD2500AF4576 /* StorageService.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		97CA8BF528A37DBF00F66238 /* Cell */ = {
