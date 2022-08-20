@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
+<img src= "Screenshots/MessengerAppSignUp.gif" width="250">
 
-![](MessengerAppSignUp.gif)
 
 </p>
 
