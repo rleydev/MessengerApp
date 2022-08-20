@@ -10,7 +10,7 @@ import UIKit
 class ChatRequestViewController: UIViewController {
     
     private let containerView = UIView()
-    private let imageView = UIImageView(image: #imageLiteral(resourceName: "human2"), contentMode: .scaleAspectFill)
+    private let imageView = UIImageView(image: UIImage(named: "avatar"), contentMode: .scaleAspectFill)
     private let nameLabel = UILabel(text: "Name Surname", font: .systemFont(ofSize: 20, weight: .light))
     private let aboutMeLabel = UILabel(text: "You have an opportunity to start a new chat", font: .systemFont(ofSize: 16, weight: .light))
     
