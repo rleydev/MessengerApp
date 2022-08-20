@@ -32,9 +32,10 @@
 ## About
 - UIKit
 - Programmatically designed UI with NSLayoutConstraints
+- UICollectionViewCompositionalLayout and UICollectionViewDiffableDataSource
 - MVC architecture
 - SPM dependecies: SDWebImage, MessageKit, IQKeyboardManager, Firebase (FirebaseAuth, Firestore, FirebaseStorage)
 - Users authentification and real time messaging functionality performed with Firebase services
-- Real time chat view realised by means of MessageKit framework.
+- Real time chat view built by means of MessageKit framework.
 </p>
 
