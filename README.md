@@ -1,4 +1,3 @@
-<p align="center">
 # MessengerApp
 <br />
     <p align="center">
