@@ -21,7 +21,7 @@
 <img src= "Screenshots/MessengerAppSignUp.gif" width="150">
 <img src= "Screenshots/MessengerAppSignIp.gif" width="150">
 <img src= "Screenshots/realtimechatAnn.gif" width="150">
-<img src= "Screenshots/realltimechatJane.gif" width="150">
+<img src= "Screenshots/realtimechatJane.gif" width="150">
 
 </p>
 
