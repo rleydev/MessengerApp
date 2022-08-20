@@ -1,3 +1,4 @@
+<p align="center">
 # MessengerApp
 <br />
     <p align="center">
@@ -12,16 +13,16 @@
 </p>
 
 <p align="center">
-![](https://https://github.com/rleydev/MessengerApp/MessengerAppSignUp.gif)
-<img src="https://https://github.com/rleydev/MessengerApp/MessengerAppSignUp.gif" width="250" />
+
+![](MessengerAppSignUp.gif)
 
 </p>
 
-##Requirements
+## Requirements
 - IPhone 11+
 - iOS 13.0+
 
-##About
+## About
 - UIKit
 - Programmatically designed UI with NSLayoutConstraints
 - MVC architecture
