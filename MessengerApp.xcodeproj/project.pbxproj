@@ -212,7 +212,7 @@
 		9744334D28A21F75000A4196 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				978DEBEE28B1719200DD3712 /* New Group */,
+				978DEBEE28B1719200DD3712 /* Services */,
 				9717143F28A5072A00529FE9 /* Helpers */,
 				97CA8BFE28A3A7BB00F66238 /* Protocols */,
 				9744334E28A21F7B000A4196 /* Extensions */,
@@ -293,7 +293,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		978DEBEE28B1719200DD3712 /* New Group */ = {
+		978DEBEE28B1719200DD3712 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				9717144428A523A300529FE9 /* FirestoreService.swift */,
@@ -301,7 +301,7 @@
 				9777339728A8FEF900AF4576 /* ListenerService.swift */,
 				9777339328A8DD2500AF4576 /* StorageService.swift */,
 			);
-			path = "New Group";
+			path = Services;
 			sourceTree = "<group>";
 		};
 		97CA8BF528A37DBF00F66238 /* Cell */ = {
