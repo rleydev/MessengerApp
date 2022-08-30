@@ -1,4 +1,4 @@
-# MessengerApp
+# Messenger iOS Application
 <br />
     <p align="center">
         iOS pet project application for real time chatting (text and images sending)
